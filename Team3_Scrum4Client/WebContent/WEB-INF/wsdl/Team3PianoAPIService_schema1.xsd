@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://team3_scrum4/" version="1.0" xmlns:tns="http://team3_scrum4/">
+
+  <xs:element name="CreatePiano" type="tns:CreatePiano"/>
+
+  <xs:element name="CreatePianoResponse" type="tns:CreatePianoResponse"/>
+
+  <xs:complexType name="CreatePiano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1" type="xs:int"/>
+      <xs:element name="arg2" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreatePianoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team3Piano"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="team3Piano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element name="numberOfKeys" type="xs:int"/>
+      <xs:element name="price" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
